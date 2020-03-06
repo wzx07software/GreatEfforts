@@ -4,6 +4,8 @@ import com.popsun.reflection.object.impl.ComplexObjectImpl;
 import com.popsun.reflection.object.impl.SimpleObject;
 import com.popsun.reflection.util.Log;
 
+import java.beans.IntrospectionException;
+import java.beans.PropertyDescriptor;
 import java.lang.reflect.*;
 
 /**
@@ -11,7 +13,7 @@ import java.lang.reflect.*;
  * @create 2020-03-05 15:08
  */
 public class ReflectMainTest {
-    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchMethodException {
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InvocationTargetException, InstantiationException, NoSuchMethodException, IntrospectionException {
         SimpleObject simpleObject = new SimpleObject();
         Class clazzForObject = simpleObject.getClass();
         Class clazzForClass = SimpleObject.class;
@@ -55,6 +57,8 @@ public class ReflectMainTest {
                 if (method != null) {
                     method.invoke(simpleObject, "run");
                 }
+                PropertyDescriptor propertyDescriptor = new PropertyDescriptor(field.getName(),clazzForObject);//第二种方法,其实就是将上面的第一种方法包装了
+                propertyDescriptor.getWriteMethod().invoke(simpleObject, "run2");
 //                //不建议下面的这种写法
 //                field.setAccessible(true);
 //                field.set(simpleObject, "1234");
