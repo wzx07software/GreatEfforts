@@ -1,5 +1,6 @@
 package com.popsun.reflection;
 
+import com.popsun.reflection.object.impl.ComplexObjectImpl;
 import com.popsun.reflection.object.impl.SimpleObject;
 import com.popsun.reflection.util.Log;
 
@@ -83,8 +84,8 @@ public class ReflectMainTest {
         }
         Log.info("反射通过默认构造方法创建出来的对象：" + simpleObject);
 
-        Log.info("父类清单："+clazzForClass.getSuperclass());
-        Log.info("接口清单："+clazzForClass.getInterfaces().length);
+        Log.info("父类清单："+ ComplexObjectImpl.class.getSuperclass());
+        Log.info("接口清单："+ComplexObjectImpl.class.getInterfaces()[0]+" "+ComplexObjectImpl.class.getInterfaces()[1]+" "+ComplexObjectImpl.class.getInterfaces()[2]);
 
     }
 
