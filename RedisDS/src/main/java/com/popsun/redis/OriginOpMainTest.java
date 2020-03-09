@@ -8,7 +8,6 @@ import java.net.SocketException;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 
 /**
  * @author 吴志祥
@@ -43,7 +42,7 @@ public class OriginOpMainTest {
 
     private static void getResult(OutputStream outputStream, InputStream inputStream, String cmd) throws IOException {
         System.out.println("\r\nsend command : " + cmd.replaceAll("\\r\\n", " "));
-        outputStream.write(cmd.getBytes(StandardCharsets.UTF_8));
+        outputStream.write(cmd.getBytes(Charset.forName("UTF-8")));
         outputStream.flush();
         //此写法是为了测试，不适合返回数据太多的情况
         StringBuilder stringBuilder = new StringBuilder();

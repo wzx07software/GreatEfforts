@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14676782-956c-4878-85e2-f0e9142654f0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/popsun/redis/OriginOpMainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/popsun/redis/JedisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/popsun/redis/OriginOpMainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/popsun/redis/OriginOpMainTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +40,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -83,7 +85,9 @@
       <option name="presentableId" value="Default" />
       <updated>1583482971572</updated>
       <workItem from="1583482974720" duration="3684000" />
-      <workItem from="1583486688888" duration="3113000" />
+      <workItem from="1583486688888" duration="5186000" />
+      <workItem from="1583724425893" duration="914000" />
+      <workItem from="1583726966961" duration="657000" />
     </task>
     <servers />
   </component>
