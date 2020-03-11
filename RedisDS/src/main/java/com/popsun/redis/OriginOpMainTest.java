@@ -34,6 +34,9 @@ public class OriginOpMainTest {
         getResult(outputStream, inputStream, "exists socket\r\n");
         getResult(outputStream, inputStream, "get socket\r\n");
         getResult(outputStream, inputStream, "keys *\r\n");
+        getResult(outputStream, inputStream, "PING\r\n");
+        //getResult(outputStream, inputStream, "REPLCONF ACK 0\r\n");
+
         inputStream.close();
         outputStream.close();
         socket.close();
@@ -88,7 +91,7 @@ public class OriginOpMainTest {
 
     private static void setSocket(Socket socket) throws SocketException {
         socket.setKeepAlive(true);//在链接建立后，如果在net.ipv4.tcp_keepalive_time配置的时间内没有任何数据交互，则发送一个探测包，保持链接存活。
-        socket.setSoTimeout(1000);// 可以通过这个选项来设置读取数据超时。当输入流的read方法被阻塞时，如果设置timeout（timeout的单位是毫秒），那么系统在等待了timeout毫秒后会抛出一个InterruptedIOException例外。
+        socket.setSoTimeout(10000);// 可以通过这个选项来设置读取数据超时。当输入流的read方法被阻塞时，如果设置timeout（timeout的单位是毫秒），那么系统在等待了timeout毫秒后会抛出一个InterruptedIOException例外。
         // 在抛出例外后，输入流并未关闭，你可以继续通过read方法读取数据。
         // 如果将timeout设为0，就意味着read将会无限等待下去，直到服务端程序关闭这个Socket.这也是timeout的默认值
         socket.setOOBInline(true);//如果这个Socket选项打开，可以通过Socket类的sendUrgentData方法向服务器发送一个单字节的数据。
