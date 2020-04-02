@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DesignPattern/DesignPattern.iml" filepath="$PROJECT_DIR$/DesignPattern/DesignPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GreatEfforts.iml" filepath="$PROJECT_DIR$/.idea/GreatEfforts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Io/Io.iml" filepath="$PROJECT_DIR$/Io/Io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lock/Lock.iml" filepath="$PROJECT_DIR$/Lock/Lock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RedisDS/RedisDS.iml" filepath="$PROJECT_DIR$/RedisDS/RedisDS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Reflection/Reflection.iml" filepath="$PROJECT_DIR$/Reflection/Reflection.iml" />
+    </modules>
+  </component>
+</project>

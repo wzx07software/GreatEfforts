@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5ed3f24c-7fe3-44f5-ba0d-e908f0709c6b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CreateAndWriteAndReadPath.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPattern/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DesignPattern/src/main/java/com/popsun/designpattern/FactoryDP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelloWorld" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Io/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Io/src/main/java/com/popsun/io/buffer/ByteBufferDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Io/src/main/java/com/popsun/io/buffer/FileChannelOpenStudy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Io/src/main/java/com/popsun/io/buffer/FileChannelReadTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Io/src/main/java/com/popsun/io/buffer/FileChannelWriteTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Io/src/main/java/com/popsun/io/buffer/FileInputStreamGetChannel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lock/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lock/src/main/java/com/popsun/lock/JavaLockTestMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lock/src/main/java/com/popsun/lock/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lock/src/main/java/com/popsun/lock/object/ReentrantLockThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Lock/src/main/java/com/popsun/lock/object/SyncRunable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testFileChannelReadTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisDS/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedisDS/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reflection/target/classes/META-INF/Reflection.kotlin_module" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZWTbHRR8eh2dhDkOvUQMpmCnaA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../yitong/prod03-ytphsp-db" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.popsun.lock" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.FileChannelWriteTest">
+    <configuration name="ByteBufferDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.popsun.io.buffer.ByteBufferDemo" />
+      <module name="Io" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.popsun.io.buffer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileChannelOpenStudy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.popsun.io.buffer.FileChannelOpenStudy" />
+      <module name="Io" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.popsun.io.buffer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileChannelReadTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.popsun.io.buffer.FileChannelReadTest" />
+      <module name="Io" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.popsun.io.buffer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileChannelWriteTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.popsun.io.buffer.FileChannelWriteTest" />
+      <module name="Io" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.popsun.io.buffer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileInputStreamGetChannel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.popsun.io.buffer.FileInputStreamGetChannel" />
+      <module name="Io" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.popsun.io.buffer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FileChannelWriteTest" />
+        <item itemvalue="Application.FileChannelReadTest" />
+        <item itemvalue="Application.FileInputStreamGetChannel" />
+        <item itemvalue="Application.FileChannelOpenStudy" />
+        <item itemvalue="Application.ByteBufferDemo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ed3f24c-7fe3-44f5-ba0d-e908f0709c6b" name="Default Changelist" comment="" />
+      <created>1584953919540</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584953919540</updated>
+      <workItem from="1584953921012" duration="2593000" />
+      <workItem from="1585013589062" duration="1221000" />
+      <workItem from="1585122301556" duration="14206000" />
+      <workItem from="1585291640789" duration="33000" />
+      <workItem from="1585632056374" duration="1223000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
