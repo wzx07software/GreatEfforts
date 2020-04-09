@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/RedisDS/pom.xml" />
         <option value="$PROJECT_DIR$/Reflection/pom.xml" />
         <option value="$PROJECT_DIR$/Io/pom.xml" />
+        <option value="$PROJECT_DIR$/MultiThread/pom.xml" />
       </list>
     </option>
   </component>

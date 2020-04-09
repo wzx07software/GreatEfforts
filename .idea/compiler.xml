@@ -6,18 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="RedisDS" />
         <module name="Lock" />
         <module name="DesignPattern" />
+        <module name="MultiThread" />
         <module name="Io" />
+        <module name="RedisDS" />
         <module name="Reflection" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="DesignPattern" target="1.5" />
+      <module name="DesignPattern" target="8" />
       <module name="Io" target="8" />
-      <module name="Lock" target="1.5" />
-      <module name="RedisDS" target="1.5" />
+      <module name="Lock" target="8" />
+      <module name="MultiThread" target="8" />
+      <module name="RedisDS" target="8" />
       <module name="Reflection" target="8" />
     </bytecodeTargetLevel>
   </component>

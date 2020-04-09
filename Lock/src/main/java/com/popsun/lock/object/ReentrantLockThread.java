@@ -2,6 +2,7 @@ package com.popsun.lock.object;
 
 import com.popsun.lock.Log;
 
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 
 /**
@@ -30,6 +31,7 @@ public class ReentrantLockThread extends Thread {
         try {
             Log.info(Thread.currentThread().getName() + " is getting lock1。。。。。。。。。。。。。。。。。。");
             reentrantLock.lock();
+            Condition condition = reentrantLock.newCondition();
             Log.info(Thread.currentThread().getName() + " runed method1");
             Thread.sleep(2000);
             method2();
