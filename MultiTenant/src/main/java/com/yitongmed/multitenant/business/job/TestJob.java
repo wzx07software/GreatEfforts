@@ -1,0 +1,13 @@
+package com.yitongmed.multitenant.business.job;
+
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+
+public class TestJob implements Job {
+    @Override
+    public void execute(JobExecutionContext context) throws JobExecutionException {
+        String temp = "temp";
+        System.out.println(temp);
+    }
+}

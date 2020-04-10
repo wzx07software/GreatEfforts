@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yitongmed.multitenant.common.mybatis.mapper.RecordMainExtMapper">
+  <resultMap id="BaseResultMap" type="com.yitongmed.multitenant.common.mybatis.model.RecordMainExt">
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="CUSTOMER_ID" jdbcType="BIGINT" property="customerId" />
+    <result column="RECORD_MAIN_ID" jdbcType="BIGINT" property="recordMainId" />
+    <result column="TEMPLET_MAIN_ID" jdbcType="VARCHAR" property="templetMainId" />
+    <result column="FIXED" jdbcType="INTEGER" property="fixed" />
+    <result column="DEL_FLG" jdbcType="INTEGER" property="delFlg" />
+    <result column="CREATE_USER" jdbcType="VARCHAR" property="createUser" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="UPDATE_USER" jdbcType="VARCHAR" property="updateUser" />
+    <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.yitongmed.multitenant.common.mybatis.model.RecordMainExtWithBLOBs">
+    <result column="RESULT" jdbcType="LONGVARCHAR" property="result" />
+    <result column="SIMPLE_RESULT" jdbcType="LONGVARCHAR" property="simpleResult" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    ID, CUSTOMER_ID, RECORD_MAIN_ID, TEMPLET_MAIN_ID, FIXED, DEL_FLG, CREATE_USER, CREATE_TIME, 
+    UPDATE_USER, UPDATE_TIME
+  </sql>
+  <sql id="Blob_Column_List">
+    RESULT, SIMPLE_RESULT
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="com.yitongmed.multitenant.common.mybatis.model.RecordMainExtCriteria" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from record_main_ext
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="com.yitongmed.multitenant.common.mybatis.model.RecordMainExtCriteria" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from record_main_ext
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from record_main_ext
+    where ID = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from record_main_ext
+    where ID = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.yitongmed.multitenant.common.mybatis.model.RecordMainExtCriteria">
+    delete from record_main_ext
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.yitongmed.multitenant.common.mybatis.model.RecordMainExtWithBLOBs">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into record_main_ext (CUSTOMER_ID, RECORD_MAIN_ID, TEMPLET_MAIN_ID, 
+      FIXED, DEL_FLG, CREATE_USER, 
+      CREATE_TIME, UPDATE_USER, UPDATE_TIME, 
+      RESULT, SIMPLE_RESULT)
+    values (#{customerId,jdbcType=BIGINT}, #{recordMainId,jdbcType=BIGINT}, #{templetMainId,jdbcType=VARCHAR}, 
+      #{fixed,jdbcType=INTEGER}, #{delFlg,jdbcType=INTEGER}, #{createUser,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{result,jdbcType=LONGVARCHAR}, #{simpleResult,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.yitongmed.multitenant.common.mybatis.model.RecordMainExtWithBLOBs">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into record_main_ext
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="customerId != null">
+        CUSTOMER_ID,
+      </if>
+      <if test="recordMainId != null">
+        RECORD_MAIN_ID,
+      </if>
+      <if test="templetMainId != null">
+        TEMPLET_MAIN_ID,
+      </if>
+      <if test="fixed != null">
+        FIXED,
+      </if>
+      <if test="delFlg != null">
+        DEL_FLG,
+      </if>
+      <if test="createUser != null">
+        CREATE_USER,
+      </if>
+      <if test="createTime != null">
+        CREATE_TIME,
+      </if>
+      <if test="updateUser != null">
+        UPDATE_USER,
+      </if>
+      <if test="updateTime != null">
+        UPDATE_TIME,
+      </if>
+      <if test="result != null">
+        RESULT,
+      </if>
+      <if test="simpleResult != null">
+        SIMPLE_RESULT,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="customerId != null">
+        #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="recordMainId != null">
+        #{recordMainId,jdbcType=BIGINT},
+      </if>
+      <if test="templetMainId != null">
+        #{templetMainId,jdbcType=VARCHAR},
+      </if>
+      <if test="fixed != null">
+        #{fixed,jdbcType=INTEGER},
+      </if>
+      <if test="delFlg != null">
+        #{delFlg,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null">
+        #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null">
+        #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="result != null">
+        #{result,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="simpleResult != null">
+        #{simpleResult,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.yitongmed.multitenant.common.mybatis.model.RecordMainExtCriteria" resultType="java.lang.Long">
+    select count(*) from record_main_ext
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update record_main_ext
+    <set>
+      <if test="record.id != null">
+        ID = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.customerId != null">
+        CUSTOMER_ID = #{record.customerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.recordMainId != null">
+        RECORD_MAIN_ID = #{record.recordMainId,jdbcType=BIGINT},
+      </if>
+      <if test="record.templetMainId != null">
+        TEMPLET_MAIN_ID = #{record.templetMainId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.fixed != null">
+        FIXED = #{record.fixed,jdbcType=INTEGER},
+      </if>
+      <if test="record.delFlg != null">
+        DEL_FLG = #{record.delFlg,jdbcType=INTEGER},
+      </if>
+      <if test="record.createUser != null">
+        CREATE_USER = #{record.createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        CREATE_TIME = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateUser != null">
+        UPDATE_USER = #{record.updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null">
+        UPDATE_TIME = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.result != null">
+        RESULT = #{record.result,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="record.simpleResult != null">
+        SIMPLE_RESULT = #{record.simpleResult,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update record_main_ext
+    set ID = #{record.id,jdbcType=BIGINT},
+      CUSTOMER_ID = #{record.customerId,jdbcType=BIGINT},
+      RECORD_MAIN_ID = #{record.recordMainId,jdbcType=BIGINT},
+      TEMPLET_MAIN_ID = #{record.templetMainId,jdbcType=VARCHAR},
+      FIXED = #{record.fixed,jdbcType=INTEGER},
+      DEL_FLG = #{record.delFlg,jdbcType=INTEGER},
+      CREATE_USER = #{record.createUser,jdbcType=VARCHAR},
+      CREATE_TIME = #{record.createTime,jdbcType=TIMESTAMP},
+      UPDATE_USER = #{record.updateUser,jdbcType=VARCHAR},
+      UPDATE_TIME = #{record.updateTime,jdbcType=TIMESTAMP},
+      RESULT = #{record.result,jdbcType=LONGVARCHAR},
+      SIMPLE_RESULT = #{record.simpleResult,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update record_main_ext
+    set ID = #{record.id,jdbcType=BIGINT},
+      CUSTOMER_ID = #{record.customerId,jdbcType=BIGINT},
+      RECORD_MAIN_ID = #{record.recordMainId,jdbcType=BIGINT},
+      TEMPLET_MAIN_ID = #{record.templetMainId,jdbcType=VARCHAR},
+      FIXED = #{record.fixed,jdbcType=INTEGER},
+      DEL_FLG = #{record.delFlg,jdbcType=INTEGER},
+      CREATE_USER = #{record.createUser,jdbcType=VARCHAR},
+      CREATE_TIME = #{record.createTime,jdbcType=TIMESTAMP},
+      UPDATE_USER = #{record.updateUser,jdbcType=VARCHAR},
+      UPDATE_TIME = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yitongmed.multitenant.common.mybatis.model.RecordMainExtWithBLOBs">
+    update record_main_ext
+    <set>
+      <if test="customerId != null">
+        CUSTOMER_ID = #{customerId,jdbcType=BIGINT},
+      </if>
+      <if test="recordMainId != null">
+        RECORD_MAIN_ID = #{recordMainId,jdbcType=BIGINT},
+      </if>
+      <if test="templetMainId != null">
+        TEMPLET_MAIN_ID = #{templetMainId,jdbcType=VARCHAR},
+      </if>
+      <if test="fixed != null">
+        FIXED = #{fixed,jdbcType=INTEGER},
+      </if>
+      <if test="delFlg != null">
+        DEL_FLG = #{delFlg,jdbcType=INTEGER},
+      </if>
+      <if test="createUser != null">
+        CREATE_USER = #{createUser,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null">
+        UPDATE_USER = #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="result != null">
+        RESULT = #{result,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="simpleResult != null">
+        SIMPLE_RESULT = #{simpleResult,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.yitongmed.multitenant.common.mybatis.model.RecordMainExtWithBLOBs">
+    update record_main_ext
+    set CUSTOMER_ID = #{customerId,jdbcType=BIGINT},
+      RECORD_MAIN_ID = #{recordMainId,jdbcType=BIGINT},
+      TEMPLET_MAIN_ID = #{templetMainId,jdbcType=VARCHAR},
+      FIXED = #{fixed,jdbcType=INTEGER},
+      DEL_FLG = #{delFlg,jdbcType=INTEGER},
+      CREATE_USER = #{createUser,jdbcType=VARCHAR},
+      CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      UPDATE_USER = #{updateUser,jdbcType=VARCHAR},
+      UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+      RESULT = #{result,jdbcType=LONGVARCHAR},
+      SIMPLE_RESULT = #{simpleResult,jdbcType=LONGVARCHAR}
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.yitongmed.multitenant.common.mybatis.model.RecordMainExt">
+    update record_main_ext
+    set CUSTOMER_ID = #{customerId,jdbcType=BIGINT},
+      RECORD_MAIN_ID = #{recordMainId,jdbcType=BIGINT},
+      TEMPLET_MAIN_ID = #{templetMainId,jdbcType=VARCHAR},
+      FIXED = #{fixed,jdbcType=INTEGER},
+      DEL_FLG = #{delFlg,jdbcType=INTEGER},
+      CREATE_USER = #{createUser,jdbcType=VARCHAR},
+      CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      UPDATE_USER = #{updateUser,jdbcType=VARCHAR},
+      UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP}
+    where ID = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

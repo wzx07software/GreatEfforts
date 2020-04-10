@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ed3f24c-7fe3-44f5-ba0d-e908f0709c6b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lock/src/main/java/com/popsun/lock/ReentrantLockTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MultiThread/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MultiThread/src/main/java/com/popsun/thread/multi/CountDownTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MultiThread/src/main/java/com/popsun/thread/multi/SemaphoreTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lock/src/main/java/com/popsun/lock/object/ReentrantLockThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lock/src/main/java/com/popsun/lock/object/ReentrantLockThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MultiThread/src/main/java/com/popsun/thread/multi/ThreadLocalTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +54,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -170,7 +166,9 @@
       <workItem from="1585291640789" duration="33000" />
       <workItem from="1585632056374" duration="1223000" />
       <workItem from="1585792225797" duration="591000" />
-      <workItem from="1586403892966" duration="9120000" />
+      <workItem from="1586403892966" duration="9810000" />
+      <workItem from="1586419418233" duration="3496000" />
+      <workItem from="1586487008225" duration="1025000" />
     </task>
     <servers />
   </component>

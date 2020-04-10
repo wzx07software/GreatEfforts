@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="context">
+        <plugin
+                type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+            <property name="searchString" value="Example$"/>
+            <property name="replaceString" value="Criteria"/>
+        </plugin>
+        <!--自动实现序列化接口 -->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <!--生成toString方法 -->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <!--生成equals和hashCode方法 -->
+        <plugin
+                type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+
+        <jdbcConnection
+                connectionURL="jdbc:mysql://192.168.1.145:3306/phsp?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;allowMultiQueries=true&amp;&amp;serverTimezone=Asia/Shanghai"
+                driverClass="com.mysql.cj.jdbc.Driver" password="1qazxsw2"
+                userId="phsp_data"/>
+
+        <javaModelGenerator
+                targetPackage="com.yitongmed.multitenant.common.mybatis.model"
+                targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <sqlMapGenerator
+                targetPackage="com.yitongmed.multitenant.common.mybatis.mapper"
+                targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.yitongmed.multitenant.common.mybatis.mapper"
+                             targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--
+        <table tableName="RECORD_INDEX" domainObjectName="RecordIndex" >
+            <generatedKey column="RECORD_INDEX_ID" sqlStatement="MySql" identity="true" />
+        </table>
+
+        <table tableName="RECORD_MAIN_EXT" domainObjectName="RecordMainExt" >
+            <generatedKey column="id" sqlStatement="MySql" identity="true" />
+        </table>
+
+        <table tableName="RECORD_MAIN" domainObjectName="RecordMain" >
+            <generatedKey column="RECORD_MAIN_ID" sqlStatement="MySql" identity="true" />
+        </table>
+
+        <table tableName="Hra_Result" domainObjectName="HraResult" >
+            <generatedKey column="id" sqlStatement="MySql" identity="true" />
+        </table>
+-->
+
+
+        <!--		<table tableName="evaluate_rule" domainObjectName="EvaluateRule"><generatedKey column="id_evaluate_rule" sqlStatement="MySql" identity="true"/></table>-->
+        <!--		<table tableName="evaluate_rule_detail" domainObjectName="EvaluateRuleDetail"><generatedKey column="id_evaluate_rule_detail" sqlStatement="MySql" identity="true"/></table>-->
+        <!--		<table tableName="evaluate_rule_summary" domainObjectName="EvaluateRuleSummary"><generatedKey column="id_evaluate_rule_summary" sqlStatement="MySql" identity="true"/></table>-->
+        <!--		<table tableName="evaluate_page" domainObjectName="EvaluatePage"><generatedKey column="id_evaluate_page" sqlStatement="MySql" identity="true"/></table>-->
+        <!--		<table tableName="evaluate_question_group" domainObjectName="EvaluateQuestionGroup"><generatedKey column="id_evaluate_question_group" sqlStatement="MySql" identity="true"/></table>-->
+        <!--		<table tableName="evaluate_group_desc" domainObjectName="EvaluateGroupDesc"><generatedKey column="id_evaluate_group_desc" sqlStatement="MySql" identity="true"/></table>-->
+        <!--		<table tableName="evaluate_question" domainObjectName="EvaluateQuestion"><generatedKey column="id_evaluate_question" sqlStatement="MySql" identity="true"/></table>-->
+        <!--		<table tableName="evaluate_option" domainObjectName="EvaluateOption"><generatedKey column="id_evaluate_option" sqlStatement="MySql" identity="true"/></table>-->
+        <!--		<table tableName="evaluate_display_condition" domainObjectName="EvaluateDisplayCondition"><generatedKey column="id_evaluate_display_condition" sqlStatement="MySql" identity="true"/></table>-->
+        <!--			<table tableName="evaluate_group_desc" domainObjectName="EvaluateGroupDesc"><generatedKey column="id_evaluate_group_desc" sqlStatement="MySql" identity="true"/></table>
+                -->
+        <table tableName="RECORD_MAIN_EXT" domainObjectName="RecordMainExt">
+            <generatedKey column="ID" sqlStatement="MySql" identity="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
