@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/Reflection/pom.xml" />
         <option value="$PROJECT_DIR$/Io/pom.xml" />
         <option value="$PROJECT_DIR$/MultiThread/pom.xml" />
+        <option value="$PROJECT_DIR$/MultiTenant/pom.xml" />
       </list>
     </option>
   </component>

@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/MultiThread/MultiThread.iml" filepath="$PROJECT_DIR$/MultiThread/MultiThread.iml" />
       <module fileurl="file://$PROJECT_DIR$/RedisDS/RedisDS.iml" filepath="$PROJECT_DIR$/RedisDS/RedisDS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Reflection/Reflection.iml" filepath="$PROJECT_DIR$/Reflection/Reflection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiTenant/multi-tenant.iml" filepath="$PROJECT_DIR$/MultiTenant/multi-tenant.iml" />
     </modules>
   </component>
 </project>
